@@ -5,9 +5,11 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.paulojr.springmvc.models.Produto;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
 @Repository
+@Scope(value=Sco)
 public class ProdutoDAO {
 
 	private Map<Integer, Produto> manager = new LinkedHashMap<Integer, Produto>();

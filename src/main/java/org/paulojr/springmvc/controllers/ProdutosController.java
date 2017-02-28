@@ -47,7 +47,7 @@ public class ProdutosController {
 	@ResponseStatus(value=HttpStatus.PRECONDITION_FAILED)
 	@ExceptionHandler(BindException.class)
 	public String tratadorDeException(BindException e) {
-		log.error("Erro de conversão captado", e);
+		System.out.println("Erro de conversão captado " + e.getMessage());
 		return "tratei";
 	}
 	
